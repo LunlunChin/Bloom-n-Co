@@ -4,11 +4,16 @@
     import { selected_items,items,cart_items } from "./stores";
     //import {cart} from "./Items.svelte";
 
-	export let name;
+	export let products;
+
+	function clear() {
+        
+        cart_items.set([]); //set selected item to null
+        
+    }
+
+	
 </script>
-
-
-
 
 
 
@@ -19,13 +24,15 @@
 <button on:click={()=>{document.getElementById("overlay").style.display = "block";
 }}>Open Cart</button>
 
-<p>{$isOverlay}</p>
+
 
 
 <div id="overlay">
 
+	{#each products as item}
 
-	<p>{name}</p>
+	<p>{item.name}</p>
+	{/each}
      <!-- <div class="item-list">
 {#each cart as item }
 	{#if item.quantity > 0}
@@ -46,9 +53,8 @@
 {/each} -->
 
     <button on:click={()=>{document.getElementById("overlay").style.display = "none";
-    
 }}>Close</button>
-
+<button on:click={clear}>Clear</button>
 </div>
 
 

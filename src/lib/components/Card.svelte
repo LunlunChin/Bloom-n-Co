@@ -1,5 +1,5 @@
 <script>
-	import { selected_items,items } from "./stores";
+	import { selected_items,items,cart_items } from "./stores";
 
 	export let name;
 	export let price;
@@ -23,8 +23,21 @@ let selected;
     }
     $: updateSelection(selected);
 
-
-	
+	function addToCart() {
+        let existing_cart = $cart_items;
+        let product_list = $items;
+        for (let selected_product of $selected_items) {
+            product_list = product_list.filter((x) => {
+                if (x.name == selected_product) {
+                 existing_cart.push({'name':x.name});
+                 cart_items.set(existing_cart)
+                }
+            });
+        }
+        
+    }
+	$: addToCart()
+$: cart_items	
 </script>
 
 
@@ -41,7 +54,7 @@ let selected;
 				<span class="price">RM {price}</span>
 				<h6>{cate}</h6>
 				
-				<!-- <button on:click={()=>addToCart(carter)}>Add to Cart</button> -->
+				<!-- <button on:click={addToCart}>Add to Cart</button> -->
 				{#if rating == 5}
 					<p>⭐⭐⭐⭐⭐</p>
 				{:else if rating == 4}
@@ -55,9 +68,9 @@ let selected;
 	
 
 </div>
-{#each cart as item }
+<!-- {#each cart as item }
 <p>{item.name}</p>
-{/each}
+{/each} -->
 
 
 
