@@ -1,5 +1,6 @@
 <script>
 	import { selected_items,items,cart_items } from "./stores";
+	import {fade, fly} from 'svelte/transition';
 
 	export let name;
 	export let price;
@@ -36,11 +37,10 @@ let selected;
         }
         
     }
-	$: addToCart()
-$: cart_items	
+	
 </script>
 
-
+<div in:fade out:fly={{y:-50, duration: 1000}}>
 <div class="container">
 
 		<div class="column">
@@ -67,6 +67,7 @@ $: cart_items
 		</div>
 	
 
+</div>
 </div>
 <!-- {#each cart as item }
 <p>{item.name}</p>

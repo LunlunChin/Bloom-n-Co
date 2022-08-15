@@ -3,13 +3,16 @@
     import Overlay from "./Overlay.svelte";
     import { selected_items,items,cart_items } from "./stores";
     //import {cart} from "./Items.svelte";
+	import {fade, fly} from 'svelte/transition';
 
 	export let products;
 
 	function clear() {
         
         cart_items.set([]); //set selected item to null
-        
+		// for(let item in $cart_items){
+		// item.quantity=0;
+		// }
     }
 
 	
@@ -22,16 +25,17 @@
 
 
 <button on:click={()=>{document.getElementById("overlay").style.display = "block";
-}}>Open Cart</button>
+}}><i class="fa-solid fa-cart-shopping">Open Cart</i></button>
 
 
 
-
+<div in:fade out:fly={{y:-50, duration: 2000}}>
 <div id="overlay">
 
 	{#each products as item}
 
-	<p>{item.name}</p>
+	<p>{item.name}   {item.price}  {item.quantity}</p>
+	
 	{/each}
      <!-- <div class="item-list">
 {#each cart as item }
@@ -56,6 +60,7 @@
 }}>Close</button>
 <button on:click={clear}>Clear</button>
 </div>
+</div>
 
 
 
@@ -75,8 +80,9 @@
   left: 300px;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(62, 49, 54, 0.756); /* Black background with opacity */
   z-index: 2; 
+  box-shadow: 0px 0px 10px rgb(219, 134, 7);
     }
 
 	.item-list, .cart-item{

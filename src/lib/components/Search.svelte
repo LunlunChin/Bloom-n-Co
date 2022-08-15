@@ -1,53 +1,53 @@
 <script>
-    import { items, searched_items } from "./stores";
-    import { filter_by_search } from './helper';
-    let search_term;
-    
-    
-    function search_list(search_term, items) {
-        if (search_term) {
-            let results = filter_by_search(items, search_term);
-            searched_items.set(results);
-        }
-        else{
-            searched_items.set(items)
-        }
-    }
-    $: search_list(search_term, $items);
+	import { items, searched_items } from './stores';
+	import { filter_by_search } from './helper';
+	let search_term;
+
+	function search_list(search_term, items) {
+		if (search_term) {
+			let results = filter_by_search(items, search_term);
+			searched_items.set(results);
+		} else {
+			searched_items.set(items);
+		}
+	}
+	$: search_list(search_term, $items);
 </script>
+
 <body>
-<div class="box">
-<input class="box" type="search" bind:value={search_term} placeholder="Search" />
-
-</div>
+	<div class="box">
+		<input class="box" type="search" bind:value={search_term} placeholder="Search..." />
+	</div>
 </body>
+
 <style>
-
-    
-    .box{
-    position: relative;
-}
-
-input {
-    margin-left: 150px;
-    margin-bottom :30px;
-    display: flex;
-    padding: 10px;
-   
-    height: 50px;
-    
-    border: 2px solid #553c4b;
-    width: 900px;
-    background: rgb(255, 250, 250);
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 20px;
-    color: #ffd52d;
-    outline: none;
-    transition: .5s;
-}
-/* .box:hover input{
+	.box {
+		position: absolute;
+		/* background-color: rgb(186, 129, 129); */
+	}
+	body {
+		background: linear-gradient(90deg, rgba(255, 165, 133, 1) 0%, rgba(255, 237, 160, 1) 39%);
+	}
+	input {
+		margin-left: 150px;
+		margin-bottom: 30px;
+		display: flex;
+		padding: 10px;
+		height: 50px;
+		border: 2px solid #c0bcbe;
+		width: 700px;
+		background: rgb(255, 250, 250);
+		background-color: rgb(255, 250, 250);
+		border-radius: 6px;
+		box-sizing: border-box;
+		font-family: Comic Sans MS;
+		font-size: 18px;
+		color: #514721;
+		outline: none;
+		transition: 0.5s;
+		box-shadow: 2px 2px 10px rgb(145, 145, 145);
+	}
+	/* .box:hover input{
     width: 350px;
     background: #3b3640;
     border-radius: 10px;

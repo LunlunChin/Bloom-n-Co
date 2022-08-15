@@ -6,7 +6,7 @@ export let items= writable([{
     'seller' : "Ah Beng",
     'category': "Computer & Accessories",
     'rating' : 5,
-    'quantity': 1,
+    'quantity': 0,
 
 },
 {
@@ -41,7 +41,7 @@ export let selected_items = writable([
 ])
 
 export let cart_items = writable([
-    {'name':"test"}
+    
     
     
    
