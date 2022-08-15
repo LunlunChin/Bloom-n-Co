@@ -26,8 +26,9 @@
 		/* background-color: rgb(186, 129, 129); */
 	}
 	body {
-		background: linear-gradient(90deg, rgba(255, 165, 133, 1) 0%, rgba(255, 237, 160, 1) 39%);
-	}
+        background-image: url("../assets/florist.jpg");
+        
+    }
 	input {
 		margin-left: 150px;
 		margin-bottom: 30px;

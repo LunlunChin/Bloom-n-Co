@@ -40,7 +40,7 @@ let selected;
 	
 </script>
 
-<div in:fade out:fly={{y:-50, duration: 1000}}>
+<div in:fade out:fly={{y:-50}}>
 <div class="container">
 
 		<div class="column">
@@ -98,7 +98,7 @@ let selected;
 	img {
 		height: 50px;
 		width: 50px;
-	}
+		}
 	
 	.column {
 		float: left;
