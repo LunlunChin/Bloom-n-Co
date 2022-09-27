@@ -1,29 +1,35 @@
+import { add_attribute } from 'svelte/internal';
 import { writable } from 'svelte/store';
 
 export let items= writable([{
-    'name' : "apple",
-    'price' : 1001,
-    'seller' : "Ah Beng",
-    'category': "Computer & Accessories",
+    'name' : "High DANDELION",
+    'price' : 60,
+    'seller' : "Agent Ah Beng",
+    'category': "Rainbow",
     'rating' : 5,
     'quantity': 0,
+    'img_src':'./src/lib/assets/flower1',
 
 },
 {
-    'name' : "samsung",
-    'price' : 1020,
-    'seller' : "Ah Beng",
-    'category': "Computer & Accessories",
+    'name' : "Water Lagoon",
+    'price' : 78,
+    'seller' : "Agent Ah Beng",
+    'category': "Blue",
     'rating' : 3,
     'quantity': 0,
+    'img_src':'./src/lib/assets/flower1',
+
 },
 {
-    'name' : "asus",
-    'price' : 1100,
-    'seller' : "Ah Beng",
-    'category': "Computer & Accessories",
+    'name' : "Belleville",
+    'price' : 90,
+    'seller' : "Agent Ah Beng",
+    'category': "Pink",
     'rating' : 4,
     'quantity': 0,
+    'img_src':'./src/lib/assets/flower1',
+
 }
 
 ])

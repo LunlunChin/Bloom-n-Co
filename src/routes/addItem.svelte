@@ -8,9 +8,9 @@
     
     let questions = [
         '',
-		'Computer & Accessories' ,
-		'Food & Beverage' ,
-        'Pets Accessories' ,
+		'Blue' ,
+		'Rainbow' ,
+        'Red' ,
 	];
 
 	function addProduct() {
@@ -36,7 +36,7 @@
     
 </script>
 
-<div class="form-container">
+<div class="form-container bg-secondary">
 	<form on:submit|preventDefault={addProduct}>
 		<div class="row mb-3">
 			<label class="col-sm-2 col-form-label" for="product_name">Name</label>
@@ -79,7 +79,7 @@
 		</div> -->
 
 		<div class="row mb-3">
-			<label class="col-sm-2 col-form-label" for="category">Category</label>
+			<label class="col-sm-2 col-form-label" for="category">Colours</label>
 
 			<div class="col-sm-10">
 				

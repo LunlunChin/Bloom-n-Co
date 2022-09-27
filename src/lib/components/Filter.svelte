@@ -61,7 +61,7 @@
             autocomplete="off"
             bind:checked={selected_filters[criteria]}
         />
-        <label class="btn btn-outline-primary" for={criteria}>{criteria}</label>
+        <label class="btn btn-primary ms-1 text-white" for={criteria}>{criteria}</label>
     {/each}
 
     

@@ -8,9 +8,9 @@
     
     let questions = [
         '',
-		'Computer & Accessories' ,
-		'Food & Beverage' ,
-        'Pets Accessories' ,
+		'Blue' ,
+		'Rainbow' ,
+        'Red' ,
 	];
 
 	function addProduct() {

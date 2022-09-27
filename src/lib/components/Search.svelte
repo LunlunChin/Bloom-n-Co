@@ -30,8 +30,10 @@
         
     }
 	input {
-		margin-left: 150px;
+		/* margin-left: 150px; */
+		position: absolute;
 		margin-bottom: 30px;
+		/* padding-right: 30px; */
 		display: flex;
 		padding: 10px;
 		height: 50px;

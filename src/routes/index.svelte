@@ -9,10 +9,10 @@
 
 
 
-<div class="searchBar">
+<!-- <div class="searchBar">
 	<Search />
-</div>
-<button><a href="/addItem"><i class="fa-solid fa-plus"></i>Add Item</a></button>
+</div> -->
+<!-- <button><a href="/addItem"><i class="fa-solid fa-plus"></i>Add Item</a></button> -->
 
 
 

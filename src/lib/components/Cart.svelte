@@ -24,12 +24,12 @@
 
 
 
-<button on:click={()=>{document.getElementById("overlay").style.display = "block";
-}}><i class="fa-solid fa-cart-shopping">Open Cart</i></button>
+<button class="btn btn-info text-light" on:click={()=>{document.getElementById("overlay").style.display = "block";
+}}><i class="fa-solid fa-cart-shopping">&nbsp Open Cart</i></button>
 
 
 
-<div in:fade out:fly={{y:-50, duration: 2000}}>
+<!-- <div in:fade out:fly={{y:-50, duration: 2000}}> -->
 <div id="overlay">
 
 	{#each products as item}
@@ -60,7 +60,7 @@
 }}>Close</button>
 <button on:click={clear}>Clear</button>
 </div>
-</div>
+<!-- </div> -->
 
 
 

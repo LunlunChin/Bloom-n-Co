@@ -14,7 +14,7 @@
 		/>
 		<a class="navbar-brand m-0" href="/">
 			<img src={fx_hexagon} class="navbar-brand-img bg-img h-100" alt="main_logo" />
-			<span class="ms-1 font-weight-bold">Bloom' Florist</span>
+			<span class="ms-1 font-weight-bold">Bloom' & Co.</span>
 		</a>
 	</div>
 	<hr class="horizontal dark mt-0" />
@@ -31,7 +31,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link active" href="/addItem">
+				<a class="nav-link" href="/addItem">
 					<div
 						class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center"
 					>
@@ -51,7 +51,7 @@
 	<div class="sidenav-footer mx-3 ">
 		<div class="card card-plain shadow-none" id="sidenavCard">
 			<div class="card-body text-center p-3 w-100 pt-0">
-				<p>Powered by Fusionex</p>
+				<p>Feel the blossom.<br> by Bloom' & Co.</p>
 			</div>
 		</div>
 	</div>

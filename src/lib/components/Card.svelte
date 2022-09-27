@@ -1,6 +1,7 @@
 <script>
 	import { selected_items,items,cart_items } from "./stores";
 	import {fade, fly} from 'svelte/transition';
+	import fx_hexagon from '$lib/assets/flower1.png';
 
 	export let name;
 	export let price;
@@ -8,7 +9,7 @@
 	export let rating;
 	export let cart= [];
 
-	let img_src = '/favicon.png';
+	let img_src = '$lib/assets/flower1.png';
 ;
 
 let selected;
@@ -40,7 +41,7 @@ let selected;
 	
 </script>
 
-<div in:fade out:fly={{y:-50}}>
+<!-- <div in:fade out:fly={{y:-50}}> -->
 <div class="container">
 
 		<div class="column">
@@ -68,7 +69,7 @@ let selected;
 	
 
 </div>
-</div>
+<!-- </div> -->
 <!-- {#each cart as item }
 <p>{item.name}</p>
 {/each} -->
@@ -140,8 +141,8 @@ let selected;
 		padding: 7px 20px;
 		margin: 10px;
 		border: none;
-		transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s,
-			transform 0.1s ease 0s;
+		/* transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s,
+			transform 0.1s ease 0s; */
 		background: linear-gradient(
 			to right,
 			rgb(255, 85, 18) 0%,

@@ -1,11 +1,28 @@
+
+<script>
+	import Items from '$lib/components/Items.svelte';
+	import Form from '$lib/components/Form.svelte';
+	import Filter from '$lib/components/Filter.svelte';
+	import Search from '$lib/components/Search.svelte';
+	import Cart from '$lib/components/Cart.svelte';
+
+</script>
+
 <nav
-	class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
+	class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl "
 	id="navbarBlur"
 	data-scroll="false"
 >
-	<div class="container-fluid py-2 px-3">
-		<h1 class="text-white">Welcome back, Lun</h1>
+	<div class="container-fluid py-2  ">
+    <div class="row">
+		<h3 class="text-white ">Welcome back, Lun</h3>
+ 
+    <div class="searchBar">
+      <Search />
+    </div>
+  </div>
         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          
 		<div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar" >
               </div>
             <ul class="navbar-nav  justify-content-end">

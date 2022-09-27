@@ -72,9 +72,9 @@ $: cart_items
 
 </script>
 <!-- <button on:click = {addToCart}><i class="fas fa-plus"></i></button> -->
-<button on:click = {removeItems}><i class="fa-solid fa-trash text-danger">Delete</i></button>
+<button class="btn btn-danger text-light" on:click = {removeItems}><i class="fa-solid fa-trash "> &nbsp Delete</i></button>
 
-<button on:click={addToCart}><i class="fa-solid fa-cart-plus">Add To Cart</i></button>
+<button class="btn btn-info text-light " on:click={addToCart}><i class="fa-solid fa-cart-plus">&nbsp Add To Cart</i></button>
     <Cart products={$cart_items} />
 
 
